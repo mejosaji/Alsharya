@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #355EFC;
+    --primary: #203897;
     --secondary: #E93C05;
     --tertiary: #555555;
     --light: #DFE4FD;
@@ -222,7 +222,7 @@ h6,
 
 /*** Facts ***/
 .facts {
-    background: linear-gradient(rgba(53, 94, 252, .95), rgba(53, 94, 252, .95)), url(../img/bg.png);
+    background: linear-gradient(rgba(32, 56, 151, 1), rgba(53, 94, 252, .95)), url(../img/bg.png);
 }
 
 
@@ -238,7 +238,7 @@ h6,
     height: 50%;
     top: 0;
     left: 0;
-    background: linear-gradient(rgba(53, 94, 252, .95), rgba(53, 94, 252, .95)), url(../img/bg.png);
+    background: linear-gradient(rgba(53, 94, 252, .95), rgba(32, 56, 151, 1)), url(../img/bg.png);
     z-index: -1;
 }
 
@@ -653,7 +653,7 @@ p {
 
 /* Custom CSS for the button */
 .btn-primary {
-    background-color: #0d6efd; /* Primary background color */
+    background-color: #203897; /* Primary background color */
     border: none;
     transition: background-color 0.3s ease; /* Smooth transition */
 }
@@ -666,3 +666,191 @@ p {
 .wow {
     visibility: hidden;
 }
+
+
+
+
+
+
+/* Team Member Profile Component Styles */
+.team-member-profile {
+    background-color: #f8f9fa; /* Light background */
+    padding: 60px 0;
+}
+
+.team-member-profile img {
+    width: 100%;
+    height: 100%; /* Full height of the section */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.team-member-profile h1 {
+    font-size: 2.5rem; /* Display-6 size */
+    font-weight: bold;
+    color: #333; /* Dark text */
+}
+
+.team-member-profile p {
+    font-size: 1.1rem;
+    color: #666; /* Gray text */
+}
+
+.team-member-profile h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.team-member-profile .social-icons .btn {
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Circular buttons */
+    transition: all 0.3s ease;
+}
+
+.team-member-profile .social-icons .btn:hover {
+    background-color: #0d6efd; /* Darker primary color on hover */
+    transform: translateY(-5px); /* Lift effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .team-member-profile img {
+        height: 300px; /* Fixed height for smaller screens */
+        margin-bottom: 30px; /* Space between image and text */
+    }
+
+    .team-member-profile h1 {
+        font-size: 2rem; /* Smaller heading on mobile */
+    }
+
+    .team-member-profile h3 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+
+
+/* Custom Styling for CEO's Commitment Heading */
+.ceo-commitment-heading {
+    font-size: 3.5rem; /* Larger font size */
+    font-weight: 700; /* Bold font weight */
+    color: #011A41; /* Dark color */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Add spacing between letters */
+    margin-bottom: 2rem !important; /* Adjust margin */
+    position: relative; /* For pseudo-element */
+}
+
+.ceo-commitment-heading::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 100px;
+    height: 4px;
+    background-color: #355EFC; /* Primary color */
+    transform: translateX(-50%); /* Center the line */
+}
+
+
+
+
+/* Custom Styling for Quote Text */
+.quote-text {
+    position: relative;
+    padding-left: 40px; /* Space for the opening quote */
+    padding-right: 40px; /* Space for the closing quote */
+    font-style: italic; /* Italicize the text */
+    color: #555; /* Slightly darker gray for better readability */
+}
+
+.quote-text::before,
+.quote-text::after {
+    font-size: 3rem; /* Size of the quotes */
+    color: #355EFC; /* Primary color for quotes */
+    position: absolute;
+}
+
+.quote-text::before {
+    content: "“"; /* Opening quote */
+    left: 0;
+    top: -10px; /* Adjust position */
+}
+
+.quote-text::after {
+    content: "”"; /* Closing quote */
+    right: 0;
+    bottom: -10px; /* Adjust position */
+}
+
+
+
+
+
+
+
+
+/* Organic Products Section */
+.product-item {
+    transition: all 0.3s;
+    height: 100%;
+}
+
+.product-item:hover {
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+
+.product-img {
+    overflow: hidden;
+}
+
+.product-img img {
+    transition: all 0.3s;
+    width: 100%;
+    height: 410px;
+    object-fit: cover;
+}
+
+.product-item:hover .product-img img {
+    transform: scale(1.05);
+}
+
+/* Tab Navigation */
+.nav-pills .nav-link {
+    width: 130px;
+    text-align: center;
+    color: var(--dark);
+    border-radius: 50px !important;
+    margin-right: 10px;
+    transition: all 0.3s;
+}
+
+.nav-pills .nav-link.active {
+    background: var(--primary) !important;
+    color: #fff !important;
+}
+
+.nav-pills .nav-link:hover:not(.active) {
+    background: var(--light);
+}
+
+@media (max-width: 768px) {
+    .nav-pills .nav-link {
+        width: 100px;
+        margin-right: 5px;
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
